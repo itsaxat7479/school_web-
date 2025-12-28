@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bright Future Public School</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--grad:linear-gradient(135deg,#4facfe,#00f2fe);
+--glass:rgba(255,255,255,0.18);
+--blur:blur(14px);
+}
+body{
+font-family:Poppins,sans-serif;
+background:linear-gradient(180deg,#f5f9ff,#fff);
+}
+.navbar{
+background:rgba(255,255,255,.75);
+backdrop-filter:var(--blur);
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.navbar-brand{font-weight:700;color:#007bff!important}
+.hero{
+height:95vh;
+background:url("https://images.unsplash.com/photo-1588072432836-e10032774350") center/cover;
+display:flex;align-items:center;
+position:relative;color:#fff;
+}
+.hero::before{
+content:"";position:absolute;inset:0;
+background:linear-gradient(120deg,rgba(0,0,0,.65),rgba(0,0,0,.3));
+}
+.hero-box{
+position:relative;
+background:var(--glass);
+backdrop-filter:var(--blur);
+padding:45px;border-radius:22px;
+}
+.section{padding:90px 0}
+.section h2{font-weight:700;margin-bottom:40px;text-align:center}
+.card{
+border:none;border-radius:22px;overflow:hidden;
+background:var(--glass);
+backdrop-filter:var(--blur);
+box-shadow:0 20px 40px rgba(0,0,0,.1);
+transition:.4s;
+}
+.card:hover{transform:translateY(-10px)}
+.card img{height:220px;object-fit:cover}
+.gallery img,.gallery video{
+border-radius:18px;cursor:pointer;transition:.4s
+}
+.gallery img:hover,.gallery video:hover{transform:scale(1.05)}
+form{
+background:var(--glass);
+backdrop-filter:var(--blur);
+border-radius:22px;
+}
+form button{
+background:var(--grad);
+border:none;border-radius:40px;
+font-weight:600;
+}
+footer{
+background:linear-gradient(135deg,#1e3c72,#2a5298);
+color:#fff;
+}
+.whatsapp{
+position:fixed;bottom:22px;right:22px;
+background:#25D366;color:#fff;
+padding:16px 20px;border-radius:50%;
+font-size:24px;z-index:999;
+box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+#lightbox{
+display:none;position:fixed;inset:0;
+background:rgba(0,0,0,.9);
+justify-content:center;align-items:center;z-index:9999;
+}
+#lightbox img{max-width:90%;border-radius:20px}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+<a class="navbar-brand" href="#">Bright Future School</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">☰</button>
+<div id="menu" class="collapse navbar-collapse">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#teachers">Teachers</a></li>
+<li class="nav-item"><a class="nav-link" href="#facilities">Facilities</a></li>
+<li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<div class="hero-box col-md-6">
+<h1 class="fw-bold">Shaping Young Minds</h1>
+<p>Nursery to Class 10 • Smart Education • Safe Campus</p>
+<a href="#admission" class="btn btn-light rounded-pill px-4">Online Admission</a>
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+<div class="container text-center">
+<h2>About Our School</h2>
+<p class="col-md-9 mx-auto">
+Bright Future Public School is a co-educational English medium school
+offering quality education from Nursery to Class 10 with focus on
+discipline, values and academic excellence.
+</p>
+</div>
+</section>
+
+<!-- TEACHERS / MENTORS -->
+<section id="teachers" class="section bg-light">
+<div class="container">
+<h2>Our Teachers & Mentors</h2>
+<div class="row g-4">
+<div class="col-md-3"><div class="card"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2"><div class="card-body text-center"><strong>Mrs. Anjali Sharma</strong><br>English</div></div></div>
+<div class="col-md-3"><div class="card"><img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"><div class="card-body text-center"><strong>Mr. Rahul Verma</strong><br>Mathematics</div></div></div>
+<div class="col-md-3"><div class="card"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"><div class="card-body text-center"><strong>Ms. Neha Gupta</strong><br>Science</div></div></div>
+<div class="col-md-3"><div class="card"><img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"><div class="card-body text-center"><strong>Mr. Amit Singh</strong><br>Mentor</div></div></div>
+</div>
+</div>
+</section>
+
+<!-- FACILITIES -->
+<section id="facilities" class="section">
+<div class="container">
+<h2>Our Facilities</h2>
+<div class="row g-4">
+<div class="col-md-3"><div class="card"><img src="https://images.unsplash.com/photo-1588072432836-e10032774350"><div class="card-body text-center">Smart Classrooms</div></div></div>
+<div class="col-md-3"><div class="card"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"><div class="card-body text-center">Computer Lab</div></div></div>
+<div class="col-md-3"><div class="card"><img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f"><div class="card-body text-center">Library</div></div></div>
+<div class="col-md-3"><div class="card"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7"><div class="card-body text-center">Playground</div></div></div>
+</div>
+
+<h4 class="text-center mt-5">Facility Videos</h4>
+<div class="row g-4 mt-2">
+<div class="col-md-6"><video controls class="w-100 rounded" src="https://www.w3schools.com/html/mov_bbb.mp4"></video></div>
+<div class="col-md-6"><video controls class="w-100 rounded" src="https://www.w3schools.com/html/movie.mp4"></video></div>
+</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section bg-light">
+<div class="container">
+<h2>Gallery</h2>
+<div class="row g-4 gallery">
+<div class="col-md-4"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b" class="w-100" onclick="openLightbox(this.src)"></div>
+<div class="col-md-4"><img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99" class="w-100" onclick="openLightbox(this.src)"></div>
+<div class="col-md-4"><img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238" class="w-100" onclick="openLightbox(this.src)"></div>
+</div>
+
+<h4 class="text-center mt-5">Gallery Videos</h4>
+<div class="row mt-3">
+<div class="col-md-6 mx-auto">
+<video controls class="w-100 rounded" src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+</div>
+</div>
+</div>
+</section>
+
+<!-- LOCATION MAP -->
+<section id="location" class="section">
+<div class="container text-center">
+<h2>School Location</h2>
+<iframe
+src="https://www.google.com/maps?q=school&output=embed"
+width="100%" height="350" style="border-radius:20px;border:0;">
+</iframe>
+</div>
+</section>
+
+<!-- ADMISSION -->
+<section id="admission" class="section bg-light">
+<div class="container">
+<h2>Online Admission</h2>
+<form class="col-md-6 mx-auto p-4" onsubmit="sendToWhatsApp(event)">
+<input id="student" class="form-control mb-3" placeholder="Student Name" required>
+<input id="parent" class="form-control mb-3" placeholder="Parent Name" required>
+<select id="class" class="form-control mb-3">
+<option>Nursery</option><option>Class 1</option><option>Class 5</option><option>Class 10</option>
+</select>
+<input id="mobile" class="form-control mb-3" placeholder="Mobile Number" required>
+<button class="btn w-100 text-white">Submit & WhatsApp</button>
+</form>
+</div>
+</section>
+
+<!-- CONTACT INFO -->
+<section id="contact" class="section">
+<div class="container text-center">
+<h2>Contact Information</h2>
+<p class="fs-5"><strong>📞 Phone:</strong> +91 99999 99999</p>
+<p class="fs-5"><strong>📧 Email:</strong> info@brightfutureschool.com</p>
+<p class="fs-5"><strong>🏫 Address:</strong> Main Road, Your City, Your State, India</p>
+</div>
+</section>
+
+<footer class="text-center p-4">
+© 2025 Bright Future Public School
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="this.style.display='none'">
+<img id="lightbox-img">
+</div>
+
+<!-- WHATSAPP -->
+<a class="whatsapp"
+href="https://wa.me/919999999999?text=Hello%20I%20want%20admission%20details"
+target="_blank">💬</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function openLightbox(src){
+document.getElementById("lightbox").style.display="flex";
+document.getElementById("lightbox-img").src=src;
+}
+function sendToWhatsApp(e){
+e.preventDefault();
+let msg=`New Admission%0AStudent:${student.value}%0AParent:${parent.value}%0AClass:${class.value}%0AMobile:${mobile.value}`;
+window.open("https://wa.me/919999999999?text="+msg,"_blank");
+}
+</script>
+
+</body>
+</html>
