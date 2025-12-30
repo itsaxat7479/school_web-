@@ -8,100 +8,49 @@
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-:root{
---grad:linear-gradient(135deg,#4facfe,#00f2fe);
---glass:rgba(255,255,255,0.18);
---blur:blur(14px);
-}
-body{
-font-family:Poppins,sans-serif;
-background:linear-gradient(180deg,#f5f9ff,#fff);
-}
-.navbar{
-background:rgba(255,255,255,.75);
-backdrop-filter:var(--blur);
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-.navbar-brand{font-weight:700;color:#007bff!important}
+body{font-family:Poppins,sans-serif;background:#cdd9f5;}
+.navbar{background:linear-gradient(90deg,#69829c,#00c6ff);}
 .hero{
-height:95vh;
 background:url("https://images.unsplash.com/photo-1588072432836-e10032774350") center/cover;
-display:flex;align-items:center;
-position:relative;color:#fff;
+height:90vh;display:flex;align-items:center;color:#fff;
 }
-.hero::before{
-content:"";position:absolute;inset:0;
-background:linear-gradient(120deg,rgba(0,0,0,.65),rgba(0,0,0,.3));
-}
-.hero-box{
-position:relative;
-background:var(--glass);
-backdrop-filter:var(--blur);
-padding:45px;border-radius:22px;
-}
-.section{padding:90px 0}
-.section h2{font-weight:700;margin-bottom:40px;text-align:center}
-.card{
-border:none;border-radius:22px;overflow:hidden;
-background:var(--glass);
-backdrop-filter:var(--blur);
-box-shadow:0 20px 40px rgba(0,0,0,.1);
-transition:.4s;
-}
-.card:hover{transform:translateY(-10px)}
-.card img{height:220px;object-fit:cover}
-.gallery img,.gallery video{
-border-radius:18px;cursor:pointer;transition:.4s
-}
-.gallery img:hover,.gallery video:hover{transform:scale(1.05)}
-form{
-background:var(--glass);
-backdrop-filter:var(--blur);
-border-radius:22px;
-}
-form button{
-background:var(--grad);
-border:none;border-radius:40px;
-font-weight:600;
-}
-footer{
-background:linear-gradient(135deg,#1e3c72,#2a5298);
-color:#fff;
-}
+.hero-box{background:rgba(0,0,0,.6);padding:40px;border-radius:15px;}
+.section{padding:70px 0;}
+.card img{height:200px;object-fit:cover;}
+.gallery img,.gallery video{height:200px;object-fit:cover;cursor:pointer;border-radius:12px;}
 .whatsapp{
-position:fixed;bottom:22px;right:22px;
+position:fixed;bottom:20px;right:20px;
 background:#25D366;color:#fff;
-padding:16px 20px;border-radius:50%;
-font-size:24px;z-index:999;
-box-shadow:0 20px 40px rgba(0,0,0,.3);
+padding:14px 18px;border-radius:50%;
+font-size:24px;text-decoration:none;z-index:999;
 }
 #lightbox{
-display:none;position:fixed;inset:0;
-background:rgba(0,0,0,.9);
-justify-content:center;align-items:center;z-index:9999;
+display:none;position:fixed;top:0;left:0;width:100%;height:100%;
+background:rgba(0,0,0,.8);justify-content:center;align-items:center;z-index:9999;
 }
-#lightbox img{max-width:90%;border-radius:20px}
+#lightbox img{max-width:90%;max-height:90%;border-radius:15px;}
 </style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 <div class="container">
-<a class="navbar-brand" href="#">Bright Future School</a>
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">☰</button>
+<a class="navbar-brand fw-bold" href="#">Bright Future School</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
 <div id="menu" class="collapse navbar-collapse">
 <ul class="navbar-nav ms-auto">
 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-<li class="nav-item"><a class="nav-link" href="#teachers">Teachers</a></li>
 <li class="nav-item"><a class="nav-link" href="#facilities">Facilities</a></li>
 <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-<li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
+<li class="nav-item"><a class="nav-link" href="#admission">Admission</a></li>
 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 </ul>
 </div>
@@ -112,9 +61,9 @@ justify-content:center;align-items:center;z-index:9999;
 <section class="hero">
 <div class="container">
 <div class="hero-box col-md-6">
-<h1 class="fw-bold">Shaping Young Minds</h1>
+<h1>Shaping Young Minds</h1>
 <p>Nursery to Class 10 • Smart Education • Safe Campus</p>
-<a href="#admission" class="btn btn-light rounded-pill px-4">Online Admission</a>
+<a href="#admission" class="btn btn-warning rounded-pill px-4">Online Admission</a>
 </div>
 </div>
 </section>
@@ -122,32 +71,19 @@ justify-content:center;align-items:center;z-index:9999;
 <!-- ABOUT -->
 <section id="about" class="section">
 <div class="container text-center">
-<h2>About Our School</h2>
-<p class="col-md-9 mx-auto">
+<h2 class="mb-4">About Our School</h2>
+<p class="col-md-10 mx-auto">
 Bright Future Public School is a co-educational English medium school
-offering quality education from Nursery to Class 10 with focus on
-discipline, values and academic excellence.
+providing quality education from Nursery to Class 10 with modern teaching,
+experienced teachers and strong moral values.
 </p>
 </div>
 </section>
 
-<!-- TEACHERS / MENTORS -->
-<section id="teachers" class="section bg-light">
-<div class="container">
-<h2>Our Teachers & Mentors</h2>
-<div class="row g-4">
-<div class="col-md-3"><div class="card"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2"><div class="card-body text-center"><strong>Mrs. Anjali Sharma</strong><br>English</div></div></div>
-<div class="col-md-3"><div class="card"><img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"><div class="card-body text-center"><strong>Mr. Rahul Verma</strong><br>Mathematics</div></div></div>
-<div class="col-md-3"><div class="card"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"><div class="card-body text-center"><strong>Ms. Neha Gupta</strong><br>Science</div></div></div>
-<div class="col-md-3"><div class="card"><img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"><div class="card-body text-center"><strong>Mr. Amit Singh</strong><br>Mentor</div></div></div>
-</div>
-</div>
-</section>
-
 <!-- FACILITIES -->
-<section id="facilities" class="section">
+<section id="facilities" class="section bg-light">
 <div class="container">
-<h2>Our Facilities</h2>
+<h2 class="text-center mb-5">Our Facilities</h2>
 <div class="row g-4">
 <div class="col-md-3"><div class="card"><img src="https://images.unsplash.com/photo-1588072432836-e10032774350"><div class="card-body text-center">Smart Classrooms</div></div></div>
 <div class="col-md-3"><div class="card"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"><div class="card-body text-center">Computer Lab</div></div></div>
@@ -164,16 +100,16 @@ discipline, values and academic excellence.
 </section>
 
 <!-- GALLERY -->
-<section id="gallery" class="section bg-light">
+<section id="gallery" class="section">
 <div class="container">
-<h2>Gallery</h2>
-<div class="row g-4 gallery">
+<h2 class="text-center mb-5">Gallery</h2>
+<div class="row g-3 gallery">
 <div class="col-md-4"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b" class="w-100" onclick="openLightbox(this.src)"></div>
 <div class="col-md-4"><img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99" class="w-100" onclick="openLightbox(this.src)"></div>
 <div class="col-md-4"><img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238" class="w-100" onclick="openLightbox(this.src)"></div>
 </div>
 
-<h4 class="text-center mt-5">Gallery Videos</h4>
+<h4 class="text-center mt-5">Video Gallery</h4>
 <div class="row mt-3">
 <div class="col-md-6 mx-auto">
 <video controls class="w-100 rounded" src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
@@ -182,46 +118,48 @@ discipline, values and academic excellence.
 </div>
 </section>
 
-<!-- LOCATION MAP -->
-<section id="location" class="section">
-<div class="container text-center">
-<h2>School Location</h2>
-<iframe
-src="https://www.google.com/maps?q=school&output=embed"
-width="100%" height="350" style="border-radius:20px;border:0;">
-</iframe>
-</div>
-</section>
+<!-- YOUTUBE -->
 
-<!-- ADMISSION -->
-<section id="admission" class="section bg-light">
+
+<!-- ADMISSION (WHATSAPP FORM) -->
+<section id="admission" class="section">
 <div class="container">
-<h2>Online Admission</h2>
-<form class="col-md-6 mx-auto p-4" onsubmit="sendToWhatsApp(event)">
+<h2 class="text-center mb-4">Online Admission Form</h2>
+
+<form class="col-md-6 mx-auto bg-white p-4 rounded shadow"
+onsubmit="sendToWhatsApp(event)">
+
 <input id="student" class="form-control mb-3" placeholder="Student Name" required>
 <input id="parent" class="form-control mb-3" placeholder="Parent Name" required>
-<select id="class" class="form-control mb-3">
-<option>Nursery</option><option>Class 1</option><option>Class 5</option><option>Class 10</option>
+
+<select id="class" class="form-control mb-3" required>
+<option value="">Select Class</option>
+<option>Nursery</option><option>LKG</option><option>UKG</option>
+<option>Class 1</option><option>Class 2</option><option>Class 3</option>
+<option>Class 4</option><option>Class 5</option><option>Class 6</option>
+<option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option>
 </select>
+
 <input id="mobile" class="form-control mb-3" placeholder="Mobile Number" required>
-<button class="btn w-100 text-white">Submit & WhatsApp</button>
+<textarea id="address" class="form-control mb-3" placeholder="Address"></textarea>
+
+<button class="btn btn-success w-100">Submit & Send on WhatsApp</button>
 </form>
 </div>
 </section>
 
-<!-- CONTACT INFO -->
-<section id="contact" class="section">
+<!-- MAP -->
+<section id="contact" class="section bg-light">
 <div class="container text-center">
-<h2>Contact Information</h2>
-<p class="fs-5"><strong>📞 Phone:</strong> +91 99999 99999</p>
-<p class="fs-5"><strong>📧 Email:</strong> info@brightfutureschool.com</p>
-<p class="fs-5"><strong>🏫 Address:</strong> Main Road, Your City, Your State, India</p>
+<h2 class="mb-4">School Location</h2>
+<iframe src="https://www.google.com/maps?q=school&output=embed"
+width="100%" height="350" class="rounded"></iframe>
 </div>
 </section>
 
-<footer class="text-center p-4">
-© 2025 Bright Future Public School ||
-  Devlop by Akshat ||
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center p-3">
+© 2025 Bright Future Public School | All Rights Reserved || Devloped by Akshat
 </footer>
 
 <!-- LIGHTBOX -->
@@ -229,26 +167,42 @@ width="100%" height="350" style="border-radius:20px;border:0;">
 <img id="lightbox-img">
 </div>
 
-<!-- WHATSAPP -->
+<!-- WHATSAPP FLOAT BUTTON -->
 <a class="whatsapp"
 href="https://wa.me/7479591421?text=Hello%20I%20want%20admission%20details"
 target="_blank">💬</a>
 
+<!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
 function openLightbox(src){
 document.getElementById("lightbox").style.display="flex";
 document.getElementById("lightbox-img").src=src;
 }
+
 function sendToWhatsApp(e){
 e.preventDefault();
-let msg=`New Admission%0AStudent:${student.value}%0AParent:${parent.value}%0AClass:${class.value}%0AMobile:${mobile.value}`;
-window.open("https://wa.me/7479591421?text="+msg,"_blank");
+
+let student = document.getElementById("student").value;
+let parent  = document.getElementById("parent").value;
+let cls     = document.getElementById("class").value;
+let mobile  = document.getElementById("mobile").value;
+let address = document.getElementById("address").value;
+
+let phone = "7479591421"; // 🔴 CHANGE NUMBER
+
+let msg =
+"📌 *New Admission Enquiry*%0A%0A"+
+"👦 Student: "+student+"%0A"+
+"👨‍👩‍👧 Parent: "+parent+"%0A"+
+"🏫 Class: "+cls+"%0A"+
+"📞 Mobile: "+mobile+"%0A"+
+"🏠 Address: "+address;
+
+window.open("https://wa.me/"+phone+"?text="+msg,"_blank");
 }
 </script>
 
 </body>
 </html>
-
-
-
